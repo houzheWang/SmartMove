@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <ImageView
+        android:id="@+id/summary_button2"
+        android:layout_width="71dp"
+        android:layout_height="62dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="24dp"
+        android:background="#FFFFFF"
+        android:tint="#78CCD0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.943"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/summary" />
+
+     <ImageView
+        android:id="@+id/movement_button2"
+        android:layout_width="71dp"
+        android:layout_height="62dp"
+        android:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.964"
+        app:srcCompat="@drawable/movement" />
+
+    <TextView
+        android:id="@+id/text_summary2"
+        android:layout_width="75dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="4dp"
+        android:text="SUMMARY"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.965"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/summary_button"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/home_button2"
+        android:layout_width="71dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="24dp"
+        android:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home" />
+
+    <TextView
+        android:id="@+id/text_movement2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="MOVEMENT"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_home2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="HOME"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/title_summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUMMARY"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.026"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <Button
+        android:id="@+id/run_plot"
+        android:layout_width="271dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="296dp"
+        android:text="Generate running history"
+        app:backgroundTint="#044853"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/temp_plot"
+        android:layout_width="298dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="568dp"
+        android:text="Generate feet temperature"
+        app:backgroundTint="#044853"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:layout_marginTop="84dp"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/force_lineChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:padding="9dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:layout_marginTop="356dp"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/temp_lineChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:padding="9dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
